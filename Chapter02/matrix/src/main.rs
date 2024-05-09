@@ -1,5 +1,4 @@
-fn main() 
-{
+fn main() {
     // first create a couple of arrays - these will be used
     // for the vectors
     let line1: [i32; 4] = [4, 2, 3, 3];
@@ -18,23 +17,19 @@ fn main()
     println!("{:?}", result);
 }
 
-fn matrix_multiply(vec1: &[&[i32;4];4], vec2: &[&[i32;4];4]) -> [[i32; 4];4]
-{
+fn matrix_multiply(vec1: &[&[i32; 4]; 4], vec2: &[&[i32; 4]; 4]) -> [[i32; 4]; 4] {
     // we need to create the arrays to put the results into
     let mut result = [[0i32; 4]; 4];
 
     // loop through the two vectors
-    for vone in 0..4
-    {
-       for vtwo in 0..4
-       {
-          let mut sum = 0;
-          for k in 0..4
-          {
-               sum += vec1[vone][k] * vec2[k][vtwo];
-          }
-          result[vone][vtwo] = sum;
-       }
+    for vone in 0..4 {
+        for vtwo in 0..4 {
+            let mut sum = 0;
+            for k in 0..4 {
+                sum += vec1[vone][k] * vec2[k][vtwo];
+            }
+            result[vone][vtwo] = sum;
+        }
     }
     result
 }

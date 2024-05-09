@@ -1,10 +1,10 @@
 // 02/addstring-2/main.rs
 fn main() {
-    let homeTeam = "Liverpool";
+    let home_team = "Liverpool";
     let result = " beat ";
-    let awayTeam = "Manchester United";
+    let away_team = "Manchester United";
     
-    let fullLine = homeTeam.to_owned() + result + awayTeam;
+    let full_line = home_team.to_owned() + result + away_team;
     
-    println!("{}", fullLine);
+    println!("{}", full_line);
 }
